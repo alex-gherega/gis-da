@@ -1,4 +1,4 @@
-## How to access NASA satelite data
+## How to access NASA satellite data
 
 (For the purposes of this project)
 
@@ -13,7 +13,7 @@ The actual data files can be found at: [Online Archive](https://goldsmr4.gesdisc
 Follow this instructions set to gain access to the data via `wget`:
 [How to access data via wget](https://disc.gsfc.nasa.gov/information/howto?title=How%20to%20Download%20Data%20Files%20from%20HTTPS%20Service%20with%20wget)
 
-| Access to GES DISC data requires all users to be registered with the Earthdata Login system. Data continue to be free of charge and accessible via HTTPS. Access to data via anonymous FTP is no longer available. Detailed instructions on how to register and receive authorization to access GES DISC data are provided [here](https://disc.gsfc.nasa.gov/data-access).
+> Access to GES DISC data requires all users to be registered with the Earthdata Login system. Data continue to be free of charge and accessible via HTTPS. Access to data via anonymous FTP is no longer available. Detailed instructions on how to register and receive authorization to access GES DISC data are provided [here](https://disc.gsfc.nasa.gov/data-access).
 
 
 ### Pydap access
