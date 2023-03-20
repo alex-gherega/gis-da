@@ -1,4 +1,4 @@
-## How to access NASA satelite data
+## How to access NASA satellite data
 
 (For the purposes of this project)
 
