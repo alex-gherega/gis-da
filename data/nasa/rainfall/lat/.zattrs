@@ -1,0 +1,13 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "lat"
+    ],
+    "long_name": "latitude",
+    "units": "degrees_north",
+    "valid_range": [
+        -999999987000000.0,
+        999999987000000.0
+    ],
+    "vmax": 999999987000000.0,
+    "vmin": -999999987000000.0
+}

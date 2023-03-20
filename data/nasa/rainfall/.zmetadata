@@ -1,0 +1,226 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "Comment": "GMAO filename: d5124_m2_jan10.tavg1_2d_flx_Nx.monthly.201101.nc4",
+            "Contact": "http://gmao.gsfc.nasa.gov",
+            "Conventions": "CF-1",
+            "DODS_EXTRA.Unlimited_Dimension": "time",
+            "DataResolution": "0.5 x 0.625",
+            "EasternmostLongitude": "179.375",
+            "Filename": "MERRA2_400.tavgM_2d_flx_Nx.201101.nc4",
+            "Format": "NetCDF-4/HDF-5",
+            "GranuleID": "MERRA2_400.tavgM_2d_flx_Nx.201101.nc4",
+            "History": "Original file generated: Mon Jun 22 23:06:42 2015 GMT",
+            "Institution": "NASA Global Modeling and Assimilation Office",
+            "LatitudeResolution": "0.5",
+            "LongName": "MERRA2 tavg1_2d_flx_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics Monthly Mean",
+            "LongitudeResolution": "0.625",
+            "NorthernmostLatitude": "90.0",
+            "ProductionDateTime": "Original file generated: Mon Jun 22 23:06:42 2015 GMT",
+            "RangeBeginningDate": "2011-01-01",
+            "RangeBeginningTime": "00:00:00.000000",
+            "RangeEndingDate": "2011-01-31",
+            "RangeEndingTime": "23:59:59.000000",
+            "References": "http://gmao.gsfc.nasa.gov",
+            "ShortName": "M2TMNXFLX",
+            "Source": "CVS tag: GEOSadas-5_12_4",
+            "SouthernmostLatitude": "-90.0",
+            "SpatialCoverage": "global",
+            "TemporalRange": "1980-01-01 -> 2016-12-31",
+            "Title": "MERRA2 tavg1_2d_flx_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics Monthly Mean",
+            "VersionID": "5.12.4",
+            "WesternmostLongitude": "-180.0",
+            "identifier_product_doi": "10.5067/0JRLVL8YV2Y4",
+            "identifier_product_doi_authority": "http://dx.doi.org/"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "PRECTOT/.zarray": {
+            "chunks": [
+                18,
+                91,
+                144
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 999999986991104.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                140,
+                361,
+                576
+            ],
+            "zarr_format": 2
+        },
+        "PRECTOT/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "lat",
+                "lon"
+            ],
+            "fmissing_value": 999999987000000.0,
+            "long_name": "total_precipitation",
+            "missing_value": 999999986991104.0,
+            "units": "kg m-2 s-1",
+            "valid_range": [
+                -999999987000000.0,
+                999999987000000.0
+            ],
+            "vmax": 999999987000000.0,
+            "vmin": -999999987000000.0
+        },
+        "PRECTOTCORR/.zarray": {
+            "chunks": [
+                18,
+                91,
+                144
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 999999986991104.0,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                140,
+                361,
+                576
+            ],
+            "zarr_format": 2
+        },
+        "PRECTOTCORR/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "lat",
+                "lon"
+            ],
+            "fmissing_value": 999999987000000.0,
+            "long_name": "total_precipitation",
+            "missing_value": 999999986991104.0,
+            "units": "kg m-2 s-1",
+            "valid_range": [
+                -999999987000000.0,
+                999999987000000.0
+            ],
+            "vmax": 999999987000000.0,
+            "vmin": -999999987000000.0
+        },
+        "lat/.zarray": {
+            "chunks": [
+                361
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                361
+            ],
+            "zarr_format": 2
+        },
+        "lat/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lat"
+            ],
+            "long_name": "latitude",
+            "units": "degrees_north",
+            "valid_range": [
+                -999999987000000.0,
+                999999987000000.0
+            ],
+            "vmax": 999999987000000.0,
+            "vmin": -999999987000000.0
+        },
+        "lon/.zarray": {
+            "chunks": [
+                576
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                576
+            ],
+            "zarr_format": 2
+        },
+        "lon/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lon"
+            ],
+            "long_name": "longitude",
+            "units": "degrees_east",
+            "valid_range": [
+                -999999987000000.0,
+                999999987000000.0
+            ],
+            "vmax": 999999987000000.0,
+            "vmin": -999999987000000.0
+        },
+        "time/.zarray": {
+            "chunks": [
+                140
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": ">i4",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                140
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "begin_date": 20110101,
+            "begin_time": 3000,
+            "calendar": "proleptic_gregorian",
+            "long_name": "time",
+            "time_increment": 60000,
+            "units": "minutes since 2011-01-01T00:30:00",
+            "valid_range": [
+                -999999987000000.0,
+                999999987000000.0
+            ],
+            "vmax": 999999987000000.0,
+            "vmin": -999999987000000.0
+        }
+    },
+    "zarr_consolidated_format": 1
+}
