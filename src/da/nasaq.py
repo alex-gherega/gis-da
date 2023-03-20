@@ -23,6 +23,9 @@ import requests
 # overloading
 from multipledispatch import dispatch
 
+# logs
+import src.logging as log
+
 # ... query data sources
 QUERY_SRCS = {'dap': {'daily': {'prefix':'https://goldsmr4.gesdisc.eosdis.nasa.gov/opendap/MERRA2/M2T1NXSLV.5.12.4/',
                                 'infix':'MERRA2_400.tavg1_2d_slv_Nx.'},
@@ -38,27 +41,35 @@ QUERY_SRCS = {'dap': {'daily': {'prefix':'https://goldsmr4.gesdisc.eosdis.nasa.g
 # ... build query URLs sets
 @dispatch(str, str, list, list)
 def build_urls(url_prefix, url_infix, years, months): # Clojure multimethod
-    return [f'{url_home}/{y}/{mon:02d}/{url_infox}{y}{mon:02d}.nc4'
+    return [f'{url_prefix}/{y}/{url_infix}{y}{mon:02d}.nc4'
             for y in years for mon in months] # good case for a macro
 
 @dispatch(str, str, list, list, list)
 def build_urls(url_prefix, url_infix, years, months, days): # Clojure multimethod
-    return [f'{url_home}/{y}/{url_infix}{y}{mon:02d}{day:02d}.nc4'
+    return [f'{url_prefix}/{y}/{mon:02d}/{url_infix}{y}{mon:02d}{day:02d}.nc4'
             for y in years for mon in months for day in days] # good case for a macro
 
 # ... using PyDap API to query NASA's data
-@dispatch(str, str, list, str)
+def _dap_query(session, url):
+    log.info(f'Query NSA at {url}')
+    store = xr.backends.PydapDataStore.open(url, session=session)
+    log.info(store)
+    return xr.open_dataset(store)
+    
+
+@dispatch(str, str, list, list)
 def query(username, password, URLs, keys):
     datasets = []
 
     session = None
     for url in URLs:
         try:
-            session = session if session else setup_session(username, password, check_url=url)
-            store = xr.backends.PydapDataStore.open(url, session=session)
-            datasets.append(xr.open_dataset(store)[keys])
+            session = setup_session(username, password, check_url=url)
+            datasets.append(_dap_query(session, url)[keys])
         except:
             continue
+        
+    log.info(f'Queried data: {len(datasets)}')
     return xr.concat(datasets,dim='time')
     
 # ... uring requests API to query NASA's data
