@@ -1,0 +1,17 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "lat",
+        "lon"
+    ],
+    "fmissing_value": 999999987000000.0,
+    "long_name": "total_precipitation",
+    "missing_value": 999999986991104.0,
+    "units": "kg m-2 s-1",
+    "valid_range": [
+        -999999987000000.0,
+        999999987000000.0
+    ],
+    "vmax": 999999987000000.0,
+    "vmin": -999999987000000.0
+}

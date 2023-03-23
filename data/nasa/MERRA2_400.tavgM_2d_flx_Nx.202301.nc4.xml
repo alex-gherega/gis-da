@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="/data/S4paGran2HTML.xsl"?>
+<S4PAGranuleMetaDataFile>
+  <CollectionMetaData>
+    <ShortName>M2TMNXFLX</ShortName>
+    <VersionID>5.12.4</VersionID>
+    <LongName>MERRA2 tavg1_2d_flx_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics Monthly Mean</LongName>
+    <URL xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="/data/MERRA2_MONTHLY/M2TMNXFLX.5.12.4/M2TMNXFLX_5.12.4_dif.xml" xlink:show="new" xlink:actuate="onRequest" xlink:title="Click to view M2TMNXFLX collection">/data/MERRA2_MONTHLY/M2TMNXFLX.5.12.4/M2TMNXFLX_5.12.4_dif.xml</URL>
+  </CollectionMetaData>
+  <DataGranule>
+    <GranuleID>MERRA2_400.tavgM_2d_flx_Nx.202301.nc4</GranuleID>
+    <LocalGranuleID>MERRA2_400.tavgM_2d_flx_Nx.202301.nc4</LocalGranuleID>
+    <Format>NetCDF-4</Format>
+    <CheckSum>
+      <CheckSumType>CRC32</CheckSumType>
+      <CheckSumValue>432132746</CheckSumValue>
+    </CheckSum>
+    <SizeBytesDataGranule>77163710</SizeBytesDataGranule>
+    <InsertDateTime>2023-02-17 23:51:19</InsertDateTime>
+    <ProductionDateTime>2023-02-12 03:42:11</ProductionDateTime>
+  </DataGranule>
+  <RangeDateTime>
+    <RangeEndingDate>2023-01-31</RangeEndingDate>
+    <RangeEndingTime>23:59:59.000000</RangeEndingTime>
+    <RangeBeginningDate>2023-01-01</RangeBeginningDate>
+    <RangeBeginningTime>00:00:00.000000</RangeBeginningTime>
+  </RangeDateTime>
+  <SpatialDomainContainer>
+    <HorizontalSpatialDomainContainer>
+      <BoundingRectangle>
+        <WestBoundingCoordinate>-180.0</WestBoundingCoordinate>
+        <NorthBoundingCoordinate>90.0</NorthBoundingCoordinate>
+        <EastBoundingCoordinate>180.0</EastBoundingCoordinate>
+        <SouthBoundingCoordinate>-90.0</SouthBoundingCoordinate>
+      </BoundingRectangle>
+    </HorizontalSpatialDomainContainer>
+  </SpatialDomainContainer>
+  <Platform>
+    <PlatformShortName>MERRA-2</PlatformShortName>
+    <Instrument>
+      <InstrumentShortName>MERRA-2</InstrumentShortName>
+    </Instrument>
+  </Platform>
+  <PSAs>
+    <PSA>
+      <PSAName>DOI</PSAName>
+      <PSAValue>10.5067/0JRLVL8YV2Y4</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>Latitude Resoltuion</PSAName>
+      <PSAValue>0.5</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>Longitude Resolution</PSAName>
+      <PSAValue>0.625</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>Data Resolution</PSAName>
+      <PSAValue>0.5 x 0.625</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>Processing System Source</PSAName>
+      <PSAValue>CVS tag: GEOSadas-5_12_4_p37_SLES12_M2-OPS experiment_id: d5124_m2_jan10</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>Institution</PSAName>
+      <PSAValue>NASA Global Modeling and Assimilation Office</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>History</PSAName>
+      <PSAValue>Original file generated: Sun Feb 12 03:42:11 2023 GMT</PSAValue>
+    </PSA>
+    <PSA>
+      <PSAName>Comment</PSAName>
+      <PSAValue>GMAO filename: d5124_m2_jan10.tavg1_2d_flx_Nx.monthly.202301.nc4</PSAValue>
+    </PSA>
+  </PSAs>
+</S4PAGranuleMetaDataFile>

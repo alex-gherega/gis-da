@@ -1,0 +1,17 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time"
+    ],
+    "begin_date": 20110101,
+    "begin_time": 3000,
+    "calendar": "proleptic_gregorian",
+    "long_name": "time",
+    "time_increment": 60000,
+    "units": "minutes since 2011-01-01T00:30:00",
+    "valid_range": [
+        -999999987000000.0,
+        999999987000000.0
+    ],
+    "vmax": 999999987000000.0,
+    "vmin": -999999987000000.0
+}
