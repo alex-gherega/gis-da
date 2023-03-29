@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+**/dist/
+**/__pycache__
+**/*.pyc
+**/*~
+**/gisda-run.log
+**/*.1
+**/*.deprecated
