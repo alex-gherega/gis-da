@@ -7,8 +7,8 @@ import xarray as xr
 # date/time
 from datetime import datetime, date
 
-def open_rdf(columns=['PRECTOT','PRECTOTCORR']):
-    rain_xr = xr.open_zarr('data/nasa/rainfall/').load()[columns]
+def open_rdf(path='data/nasa/rainfall/', columns=['PRECTOT','PRECTOTCORR']):
+    rain_xr = xr.open_zarr(path).load()[columns]
 
     # rainfall units in kg m-2 h-1
     rain_xr = rain_xr * 3600
@@ -26,14 +26,17 @@ def sel_dailybox(rain_xr,
     rdf_box = rdf_box.coarsen(lat=2).sum().coarsen(lon=2).sum() * 24 
     rdf_box.attrs['units'] = 'kg m-2 24h'
     rdf_box = rdf_box.to_dataframe()
-    
+
+    rdf_box.rename_axis(index={'time':'date'},
+                        inplace=True)
+
+    rdf_box.rename(columns={'PRECTOT':'rainfall', 'PRECTOTCORR':'rainfall-corr'},
+                        inplace=True)
+
     # a complicated way of dropping levels
     # rdf_box = rdf_box.xs((slice(None),slice(None)), level=['lat','lon'], axis=0, drop_level=True) 
 
-    if withdrop:
-        rdf_box.index = rdf_box.index.droplevel(['lat','lon'])
+    rdf_box.index = rdf_box.index.droplevel(['lat','lon']) if withdrop else rdf_box.index
 
-    rdf_box.rename_axis('date', inplace=True)
-    rdf_box.rename(columns={'PRECTOT':'rainfall'}, inplace=True)
-
+   # rdf_box.rename(columns={'PRECTOT':'rainfall'}, inplace=True)
     return rdf_box
